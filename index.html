@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cindra Privacy Policy</title>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --fg: #221f1a;
+    --fg-muted: #6b6558;
+    --border: #e6e1d6;
+    --accent: #9a5b3f;
+    --accent-soft: #f2e4da;
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-body: "Source Serif 4", Georgia, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17140f;
+      --surface: #201c15;
+      --fg: #efe9dd;
+      --fg-muted: #a89f8c;
+      --border: #3a3327;
+      --accent: #e0a27d;
+      --accent-soft: #332a20;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17140f;
+    --surface: #201c15;
+    --fg: #efe9dd;
+    --fg-muted: #a89f8c;
+    --border: #3a3327;
+    --accent: #e0a27d;
+    --accent-soft: #332a20;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    padding-inline: 20px;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-block: 48px 80px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .brand-mark {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: 0.01em;
+  }
+
+  .brand-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-muted);
+  }
+
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+
+  .lang-toggle button {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--fg-muted);
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .lang-toggle button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--surface);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0 0 6px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fg-muted);
+    margin-bottom: 36px;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    color: var(--fg-muted);
+    margin-bottom: 40px;
+    max-width: 60ch;
+  }
+
+  section {
+    margin-bottom: 34px;
+    scroll-margin-top: 20px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 12px;
+  }
+
+  h2 .num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 14px; padding-left: 1.2em; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+
+  .permissions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .perm {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+
+  .perm-name {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .contact-box {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+
+  .contact-box a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-top: 48px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+  }
+
+  [lang="vi"] { display: none; }
+  [data-lang="vi"] [lang="vi"] { display: block; }
+  [data-lang="vi"] [lang="en"] { display: none; }
+  span[lang="vi"] { display: none; }
+  [data-lang="vi"] span[lang="vi"] { display: inline; }
+  [data-lang="vi"] span[lang="en"] { display: none; }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="page" id="root" data-lang="en">
+  <div class="masthead">
+    <div class="brand">
+      <span class="brand-mark">Cindra</span>
+      <span class="brand-tag">Privacy Policy</span>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-vi" aria-pressed="false">VI</button>
+    </div>
+  </div>
+
+  <h1>
+    <span lang="en">Privacy Policy</span>
+    <span lang="vi">Chính sách quyền riêng tư</span>
+  </h1>
+  <div class="meta">
+    <span lang="en">Last updated: September 30, 2026 &middot; App: Cindra &middot; Package: com.tth19studio.cindra</span>
+    <span lang="vi">Cập nhật lần cuối: 30/09/2026 &middot; Ứng dụng: Cindra &middot; Gói: com.tth19studio.cindra</span>
+  </div>
+
+  <p class="lead">
+    <span lang="en">Cindra is a mobile app that restores and enhances old or damaged photos using AI. This page explains what information Cindra collects, why, and how it is stored and protected.</span>
+    <span lang="vi">Cindra là ứng dụng di động giúp phục hồi và cải thiện chất lượng ảnh cũ, ảnh hư hỏng bằng AI. Trang này giải thích Cindra thu thập những thông tin gì, vì sao, và cách những thông tin đó được lưu trữ, bảo vệ.</span>
+  </p>
+
+  <section id="collect">
+    <h2><span class="num">01</span><span lang="en">Information we collect</span><span lang="vi">Thông tin chúng tôi thu thập</span></h2>
+    <div class="card">
+      <ul lang="en">
+        <li><strong>Account information</strong> — the email address and password you provide when you register. Passwords are never stored in plain text: they are hashed with bcrypt before being saved.</li>
+        <li><strong>Photos you submit</strong> — images you choose to upload for restoration. These are sent to our AI processing provider to generate the enhanced result and stored on our secure cloud storage (Amazon S3) so you can access your history.</li>
+        <li><strong>Purchase and subscription data</strong> — when you buy a Weekly or Yearly subscription, Google Play or Apple processes the payment; we receive and store only the subscription status and expiry date needed to unlock premium features, verified through Google Play's and Apple's official server APIs.</li>
+        <li><strong>Usage data</strong> — basic technical information such as your remaining credit balance and job history within the app, used solely to operate the service.</li>
+      </ul>
+      <ul lang="vi">
+        <li><strong>Thông tin tài khoản</strong> — email và mật khẩu bạn cung cấp khi đăng ký. Mật khẩu không bao giờ được lưu dạng văn bản thô, mà được băm (hash) bằng bcrypt trước khi lưu.</li>
+        <li><strong>Ảnh bạn tải lên</strong> — những ảnh bạn chọn để phục hồi. Ảnh được gửi tới nhà cung cấp xử lý AI để tạo ra kết quả, và được lưu trên kho lưu trữ đám mây an toàn (Amazon S3) để bạn xem lại lịch sử.</li>
+        <li><strong>Dữ liệu mua hàng/thuê bao</strong> — khi bạn mua gói Tuần hoặc Năm, Google Play hoặc Apple xử lý thanh toán; chúng tôi chỉ nhận và lưu trạng thái thuê bao cùng ngày hết hạn cần thiết để mở khoá tính năng premium, được xác thực qua API máy chủ chính thức của Google Play và Apple.</li>
+        <li><strong>Dữ liệu sử dụng</strong> — thông tin kỹ thuật cơ bản như số lượt (credit) còn lại và lịch sử xử lý ảnh trong app, chỉ dùng để vận hành dịch vụ.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="permissions">
+    <h2><span class="num">02</span><span lang="en">Device permissions</span><span lang="vi">Quyền truy cập thiết bị</span></h2>
+    <p lang="en">Cindra requests the following permissions, each used only for its stated purpose:</p>
+    <p lang="vi">Cindra yêu cầu các quyền sau, mỗi quyền chỉ dùng đúng cho mục đích đã nêu:</p>
+    <div class="permissions">
+      <div class="perm">
+        <div class="perm-name">Camera</div>
+        <span lang="en">To take a new photo of a physical print for restoration.</span>
+        <span lang="vi">Để chụp ảnh mới một tấm ảnh giấy cần phục hồi.</span>
+      </div>
+      <div class="perm">
+        <div class="perm-name">Photo library</div>
+        <span lang="en">To choose an existing photo from your device to upload.</span>
+        <span lang="vi">Để chọn một ảnh có sẵn trên thiết bị để tải lên.</span>
+      </div>
+      <div class="perm">
+        <div class="perm-name">Internet</div>
+        <span lang="en">To upload photos, sync your account and process subscriptions.</span>
+        <span lang="vi">Để tải ảnh lên, đồng bộ tài khoản và xử lý thuê bao.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">03</span><span lang="en">How we use information</span><span lang="vi">Cách chúng tôi sử dụng thông tin</span></h2>
+    <p lang="en">We use the information above only to: create and secure your account; generate the restored version of the photos you submit; track your remaining credits; unlock premium (unlimited) access while your subscription is active; and provide customer support when you contact us.</p>
+    <p lang="vi">Chúng tôi chỉ dùng những thông tin trên để: tạo và bảo vệ tài khoản của bạn; tạo ra phiên bản ảnh đã phục hồi từ ảnh bạn gửi; theo dõi số credit còn lại; mở khoá quyền truy cập premium (không giới hạn) khi gói thuê bao còn hiệu lực; và hỗ trợ bạn khi bạn liên hệ.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">04</span><span lang="en">Sharing with third parties</span><span lang="vi">Chia sẻ với bên thứ ba</span></h2>
+    <p lang="en">We do not sell your personal data. We share the minimum data required with:</p>
+    <p lang="vi">Chúng tôi không bán dữ liệu cá nhân của bạn. Chúng tôi chỉ chia sẻ mức tối thiểu cần thiết với:</p>
+    <ul lang="en">
+      <li>Our AI photo-enhancement provider — receives only the photo being processed, to generate the restored output.</li>
+      <li>Amazon Web Services (S3) — securely stores uploaded and processed photos.</li>
+      <li>Google Play Billing and Apple's App Store — process subscription payments; we verify entitlement through their official server APIs and never see your card details.</li>
+    </ul>
+    <ul lang="vi">
+      <li>Nhà cung cấp xử lý ảnh bằng AI — chỉ nhận ảnh đang được xử lý, để tạo ra kết quả phục hồi.</li>
+      <li>Amazon Web Services (S3) — lưu trữ an toàn ảnh đã tải lên và đã xử lý.</li>
+      <li>Google Play Billing và App Store của Apple — xử lý thanh toán thuê bao; chúng tôi chỉ xác thực quyền lợi qua API máy chủ chính thức của họ và không bao giờ thấy thông tin thẻ của bạn.</li>
+    </ul>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">05</span><span lang="en">Data storage &amp; security</span><span lang="vi">Lưu trữ &amp; bảo mật dữ liệu</span></h2>
+    <p lang="en">All traffic between the app and our servers is encrypted over HTTPS. Passwords are hashed with bcrypt and never stored or logged in plain text. Photos and account records are stored on access-controlled cloud infrastructure.</p>
+    <p lang="vi">Toàn bộ dữ liệu trao đổi giữa app và máy chủ được mã hoá qua HTTPS. Mật khẩu được băm bằng bcrypt và không bao giờ lưu hay ghi log dưới dạng văn bản thô. Ảnh và thông tin tài khoản được lưu trên hạ tầng đám mây có kiểm soát truy cập.</p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">06</span><span lang="en">Data retention</span><span lang="vi">Lưu giữ dữ liệu</span></h2>
+    <p lang="en">We keep your account and photos for as long as your account is active, so you can access your restoration history at any time.</p>
+    <p lang="vi">Chúng tôi lưu giữ tài khoản và ảnh của bạn trong suốt thời gian tài khoản còn hoạt động, để bạn có thể xem lại lịch sử phục hồi ảnh bất cứ lúc nào.</p>
+  </section>
+
+  <section id="delete-account">
+    <h2><span class="num">07</span><span lang="en">How to delete your account &amp; data</span><span lang="vi">Cách xoá tài khoản &amp; dữ liệu</span></h2>
+    <div class="card">
+      <p lang="en">You can request deletion of your Cindra account and all associated data at any time, whether or not the app is still installed:</p>
+      <p lang="vi">Bạn có thể yêu cầu xoá tài khoản Cindra cùng toàn bộ dữ liệu liên quan bất cứ lúc nào, kể cả khi không còn cài app:</p>
+      <ul lang="en">
+        <li>Send an email to <strong>andy.ttt19@gmail.com</strong> with the subject "Delete my Cindra account", from the email address registered on your Cindra account.</li>
+        <li>We will verify the request and complete deletion within 30 days.</li>
+        <li><strong>Data deleted:</strong> your account (email address and password hash), your uploaded and AI-restored photos, and your usage/job history.</li>
+        <li><strong>Data retained:</strong> subscription transaction records that Google Play or Apple require us to keep for accounting and fraud-prevention purposes, for the period required by law, after which they are removed.</li>
+      </ul>
+      <ul lang="vi">
+        <li>Gửi email tới <strong>andy.ttt19@gmail.com</strong> với tiêu đề "Delete my Cindra account", từ chính địa chỉ email đã đăng ký tài khoản Cindra.</li>
+        <li>Chúng tôi sẽ xác minh yêu cầu và hoàn tất việc xoá trong vòng 30 ngày.</li>
+        <li><strong>Dữ liệu bị xoá:</strong> tài khoản của bạn (email và mật khẩu đã băm), ảnh bạn đã tải lên và ảnh đã phục hồi bằng AI, cùng lịch sử sử dụng/xử lý ảnh.</li>
+        <li><strong>Dữ liệu được giữ lại:</strong> hồ sơ giao dịch thuê bao mà Google Play hoặc Apple yêu cầu chúng tôi lưu giữ vì mục đích kế toán và phòng chống gian lận, trong thời hạn pháp luật quy định, sau đó sẽ được xoá.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">08</span><span lang="en">Children's privacy</span><span lang="vi">Quyền riêng tư của trẻ em</span></h2>
+    <p lang="en">Cindra is intended for users aged 18 and over and is not directed at children. We do not knowingly collect personal information from children.</p>
+    <p lang="vi">Cindra dành cho người dùng từ 18 tuổi trở lên và không hướng đến trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">09</span><span lang="en">Changes to this policy</span><span lang="vi">Thay đổi đối với chính sách này</span></h2>
+    <p lang="en">We may update this policy as Cindra evolves. Material changes will be reflected on this page with an updated "Last updated" date.</p>
+    <p lang="vi">Chúng tôi có thể cập nhật chính sách này khi Cindra thay đổi. Các thay đổi quan trọng sẽ được cập nhật trên trang này kèm ngày "Cập nhật lần cuối" mới.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">10</span><span lang="en">Contact us</span><span lang="vi">Liên hệ</span></h2>
+    <div class="contact-box">
+      <p lang="en">Questions about this policy, or requests to access or delete your data, can be sent to:</p>
+      <p lang="vi">Mọi thắc mắc về chính sách này, hoặc yêu cầu truy cập/xoá dữ liệu, vui lòng gửi tới:</p>
+      <p><a href="mailto:andy.ttt19@gmail.com">andy.ttt19@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    Cindra &middot; com.tth19studio.cindra
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('root');
+    var btnEn = document.getElementById('btn-en');
+    var btnVi = document.getElementById('btn-vi');
+
+    function setLang(lang) {
+      root.setAttribute('data-lang', lang);
+      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+      btnVi.setAttribute('aria-pressed', String(lang === 'vi'));
+      try { localStorage.setItem('cindra-privacy-lang', lang); } catch (e) {}
+    }
+
+    btnEn.addEventListener('click', function () { setLang('en'); });
+    btnVi.addEventListener('click', function () { setLang('vi'); });
+
+    try {
+      var saved = localStorage.getItem('cindra-privacy-lang');
+      if (saved === 'vi') setLang('vi');
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
